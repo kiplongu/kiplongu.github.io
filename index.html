@@ -1,203 +1,231 @@
-
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <title>Rodgers the DevOps Engineer portfolio</title>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#07120f" />
     <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
+      name="description"
+      content="Rodgers Biwott is a Senior DevOps, DevSecOps and Platform Engineer building secure cloud-native platforms, delivery systems and observability products."
     />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript
-      ><link rel="stylesheet" href="assets/css/noscript.css"
-    /></noscript>
+    <meta property="og:title" content="Rodgers Biwott — Senior DevOps & Platform Engineer" />
+    <meta
+      property="og:description"
+      content="Secure cloud-native platforms, reliable delivery systems and operational clarity."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kiplongu.github.io/" />
+    <title>Rodgers Biwott — Senior DevOps & Platform Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
+    <script src="assets/js/portfolio.js" defer></script>
   </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1>RODGERS THE DEVOPS ENGINEER<br /></h1>
-        <p>
-          DevOps Engineer skilled in VSCode, Git, GitHub,Jenkins,Python,AWS,Ansible, CICD
-          pipelines,APIs,Docker, Kubernetes,Selenium,Terrafform,SQL and nginx
-          <a href="https://twitter.com/KiplonguR">@KiplonguR</a>
-        </p>
-        <ul class="actions">
-          <li>
-            <a
-              href="#header"
-              class="button icon solid solo fa-arrow-down scrolly"
-              >Continue</a
-            >
-          </li>
-        </ul>
-      </div>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">Rodgers The DevOps Engineer</a>
-      </header>
-
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="index.html">Projects</a></li>
-        </ul>
-        <ul class="icons">
-			<li><a href="https://www.linkedin.com/in/rodgersbiwott/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-			<li><a href="https://github.com/kiplongu" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="Rodgers Biwott, home">
+        <span class="brand-mark" aria-hidden="true">RB</span>
+        <span>Rodgers Biwott</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+      </button>
+      <nav id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#work">Experience</a>
+        <a href="#project">ObserveX</a>
+        <a href="#contact">Contact</a>
       </nav>
+    </header>
 
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
-            <h2>
-              <a href="https://github.com/kiplongu/RECIPE-APP-API"
-                >Recipe API app development in Python<br />
-              </a>
-            </h2>
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Nairobi, Kenya · Open to global opportunities</p>
+          <h1 id="hero-title">I build platforms that help teams <em>ship faster</em>, see clearly and recover confidently.</h1>
+          <p class="hero-summary">
+            Senior DevOps, DevSecOps and Platform Engineer with 6+ years of experience designing secure,
+            scalable cloud-native platforms across AWS, Azure and Kubernetes.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#project">Explore my work <span aria-hidden="true">↘</span></a>
+            <a class="button button-quiet" href="mailto:rodgersbiwott2016@gmail.com?subject=Résumé%20request">Request résumé</a>
+          </div>
+        </div>
+
+        <aside class="signal-card reveal" aria-label="Engineering profile">
+          <div class="signal-card-head">
+            <span>platform.signal</span>
+            <span class="live-label"><span class="status-dot"></span> live</span>
+          </div>
+          <div class="signal-grid">
+            <div><strong>70+</strong><span>repositories migrated</span></div>
+            <div><strong>70%</strong><span>faster provisioning</span></div>
+            <div><strong>60%</strong><span>higher deploy frequency</span></div>
+            <div><strong>99.9%</strong><span>platform uptime</span></div>
+          </div>
+          <div class="terminal" aria-hidden="true">
+            <p><span>$</span> kubectl get platform</p>
+            <p>delivery&nbsp;&nbsp;&nbsp;&nbsp;<b>healthy</b></p>
+            <p>security&nbsp;&nbsp;&nbsp;&nbsp;<b>enforced</b></p>
+            <p>telemetry&nbsp;&nbsp;&nbsp;<b>connected</b></p>
+          </div>
+        </aside>
+      </section>
+
+      <section class="marquee" aria-label="Core technologies">
+        <div>
+          <span>Kubernetes</span><i>✦</i><span>GitOps</span><i>✦</i><span>Terraform</span><i>✦</i>
+          <span>DevSecOps</span><i>✦</i><span>OpenTelemetry</span><i>✦</i><span>Platform Engineering</span>
+        </div>
+      </section>
+
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section-label reveal"><span>01</span> Profile</div>
+        <div class="section-content reveal">
+          <p class="kicker">From fragile processes to dependable platforms.</p>
+          <h2 id="about-title">Engineering the path from commit to production.</h2>
+          <div class="about-grid">
             <p>
-              In this project I created recipe app using Python and deployed it
-              to AWS server
+              I design and operate the infrastructure, automation and guardrails behind reliable software
+              delivery. My work spans CI/CD, GitOps, Infrastructure as Code, observability and cloud security —
+              always with developer productivity and operational confidence in mind.
             </p>
-          </header>
-          <a
-            href="https://github.com/kiplongu/RECIPE-APP-API"
-            class="image main"
-            ><img src="images/recipe.jpg" alt=""
-          /></a>
-          <ul class="actions special">
-            <li>
-              <a
-                href="https://github.com/kiplongu/RECIPE-APP-API"
-                class="button large"
-                >VIEW PROJECT</a
-              >
-            </li>
-          </ul>
-        </article>
-
-        <!-- Posts -->
-        <section class="posts">
-          <article>
-            <header>
-              <h2>
-                <a href="https://github.com/kiplongu/DevOps-Project-Full-stack"
-                  >DevOps project full-stack<br />
-                </a>
-              </h2>
-            </header>
-            <a
-              href="https://github.com/kiplongu/DevOps-Project-Full-stack"
-              class="image fit"
-              ><img src="images/devops.jpg" alt=""
-            /></a>
-            <p>DevOps project implementing CI/CD</p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://github.com/kiplongu/DevOps-Project-Full-stack"
-                  class="button"
-                  >VIEW PROJECT</a
-                >
-              </li>
-            </ul>
-          </article>
-          <article>
-            <header>
-              <h2>
-                <a href="https://github.com/kiplongu/Shop-Card-Store-Website"
-                  >Shop Card Store Website<br />
-                </a>
-              </h2>
-            </header>
-            <a
-              href="https://github.com/kiplongu/Shop-Card-Store-Website"
-              class="image fit"
-              ><img src="images/storecard.jpg" alt=""
-            /></a>
-            <p>Website for shoping store</p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://github.com/kiplongu/Shop-Card-Store-Website"
-                  class="button"
-                  >VIEW PROJECT</a
-                >
-              </li>
-            </ul>
-          </article>
-          <article>
-            <header>
-              <h2>
-                <a href="https://github.com/kiplongu/Chat-Room-Application"
-                  >Chat Room Application<br />
-                </a>
-              </h2>
-            </header>
-            <a
-              href="https://github.com/kiplongu/Chat-Room-Application"
-              class="image fit"
-              ><img src="images/ChatRoomapp.png" alt=""
-            /></a>
-            <p>Chat Room for friends to interact or share messages</p>
-            <ul class="actions special">
-              <li>
-                <a
-                  href="https://github.com/kiplongu/Chat-Room-Application"
-                  class="button"
-                  >VIEW PROJECT</a
-                >
-              </li>
-            </ul>
-          </article>
-
-
-        <section class="split contact">
-          <section class="alt">
-            <h3>Location</h3>
             <p>
-              Nairobi,Kenya, 0100<br />
-               </p>
-          </section>
-          <section>
-            <h3>Phone</h3>
-            <p><a href="#">(254) 706-346215</a></p>
-          </section>
-          <section>
-            <h3>Email</h3>
-            <p><a href="#">rodgersbiwott2016@gmail.com</a></p>
-          </section>
-          <section>
-            <h3>Social</h3>
-            <ul class="icons alt">
-              <li><a href="https://www.linkedin.com/in/rodgersbiwott/" class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-			  <li><a href="https://github.com/kiplongu" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-            </ul>
-          </section>
-        </section>
-      </footer>
+              I’m at my best turning manual, failure-prone workflows into repeatable systems: standardizing
+              delivery across dozens of repositories, building highly available Kubernetes platforms, and making
+              security a continuous part of the engineering lifecycle.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      <!-- Copyright -->
-      <div id="copyright">
-        <ul>
-          <li>&copy; Untitled</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-        </ul>
-      </div>
-    </div>
+      <section class="section capabilities" aria-labelledby="capabilities-title">
+        <div class="section-label reveal"><span>02</span> Capabilities</div>
+        <div class="section-content">
+          <h2 id="capabilities-title" class="visually-hidden">Core capabilities</h2>
+          <div class="capability-list">
+            <article class="capability reveal">
+              <span class="capability-number">01</span>
+              <div><h3>Cloud & platform engineering</h3><p>Production Kubernetes on AKS, EKS and RKE2, backed by scalable cloud infrastructure across AWS and Azure.</p></div>
+              <p class="tags">Kubernetes · Helm · RKE2 · AKS · EKS · OpenShift</p>
+            </article>
+            <article class="capability reveal">
+              <span class="capability-number">02</span>
+              <div><h3>Delivery & automation</h3><p>Repeatable infrastructure and release systems that improve deployment reliability and reduce configuration drift.</p></div>
+              <p class="tags">Terraform · Ansible · Jenkins · Azure DevOps · Argo CD</p>
+            </article>
+            <article class="capability reveal">
+              <span class="capability-number">03</span>
+              <div><h3>Security by design</h3><p>Automated controls throughout the delivery lifecycle, from source analysis and image scanning to runtime policy.</p></div>
+              <p class="tags">Vault · Trivy · SonarQube · OWASP ZAP · Checkov · Falco</p>
+            </article>
+            <article class="capability reveal">
+              <span class="capability-number">04</span>
+              <div><h3>Observability & reliability</h3><p>Connected metrics, logs and traces that shorten detection time and give teams useful operational context.</p></div>
+              <p class="tags">OpenTelemetry · Prometheus · Grafana · Loki · Tempo</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
+      <section class="section experience" id="work" aria-labelledby="experience-title">
+        <div class="section-label reveal"><span>03</span> Experience</div>
+        <div class="section-content">
+          <div class="section-heading reveal">
+            <p class="kicker">Selected career history</p>
+            <h2 id="experience-title">Building at the intersection of delivery, security and reliability.</h2>
+          </div>
+          <ol class="timeline">
+            <li class="reveal">
+              <div class="timeline-date">Nov 2025 — Present</div>
+              <div><h3>Senior DevOps & DevSecOps Engineer</h3><p class="company">Avantech Ltd</p><p>Leading enterprise CI/CD, Kubernetes and DevSecOps initiatives, including migration and stabilization across 70+ repositories.</p></div>
+            </li>
+            <li class="reveal">
+              <div class="timeline-date">Jan 2025 — Oct 2025</div>
+              <div><h3>Senior DevOps Engineer</h3><p class="company">Crafted Systems Ltd</p><p>Built highly available bare-metal RKE2 platforms, GitOps delivery, centralized secrets and distributed observability.</p></div>
+            </li>
+            <li class="reveal">
+              <div class="timeline-date">Jul 2023 — Dec 2024</div>
+              <div><h3>Senior DevSecOps Engineer</h3><p class="company">Nathan Digital</p><p>Automated AWS infrastructure and embedded cloud security, GitOps and observability across ECS and EKS environments.</p></div>
+            </li>
+            <li class="reveal">
+              <div class="timeline-date">Apr 2022 — Jun 2023</div>
+              <div><h3>DevOps Engineer</h3><p class="company">Uamuzi Foundation</p><p>Automated Azure infrastructure and established GitOps, container orchestration and production monitoring practices.</p></div>
+            </li>
+            <li class="reveal">
+              <div class="timeline-date">Apr 2019 — Mar 2022</div>
+              <div><h3>DevOps Engineer</h3><p class="company">ISON Technologies</p><p>Built CI/CD pipelines and automated Kubernetes delivery across AWS and Azure while strengthening secrets and observability.</p></div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="project" id="project" aria-labelledby="project-title">
+        <div class="project-inner reveal">
+          <div class="project-topline"><span>Independent engineering project</span><span>Cloud-native · Multi-tenant</span></div>
+          <p class="project-wordmark">OBSERVE<span>X</span></p>
+          <div class="project-copy">
+            <h2 id="project-title">Operational clarity for modern engineering teams.</h2>
+            <div>
+              <p>
+                ObserveX is a cloud-native observability and DevSecOps platform for Kubernetes, Linux servers and
+                distributed applications. It brings service health, deployment evidence, security findings and
+                incident context into one operational view.
+              </p>
+              <a class="text-link" href="https://litanovo.com/#products" target="_blank" rel="noreferrer">Discover ObserveX <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+          <ul class="project-features">
+            <li><span>01</span> Metrics, logs & traces</li>
+            <li><span>02</span> Vulnerability lifecycle</li>
+            <li><span>03</span> Release governance</li>
+            <li><span>04</span> Secure tenant isolation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section credentials" aria-labelledby="credentials-title">
+        <div class="section-label reveal"><span>04</span> Credentials</div>
+        <div class="section-content reveal">
+          <p class="kicker">Certified and continuously learning</p>
+          <h2 id="credentials-title">Deep technical foundations, applied in production.</h2>
+          <ul class="credential-grid">
+            <li><span>CKA</span>Certified Kubernetes Administrator</li>
+            <li><span>KCNA</span>Kubernetes and Cloud Native Associate</li>
+            <li><span>PCA</span>Prometheus Certified Associate</li>
+            <li><span>AWS</span>Certified SysOps Administrator</li>
+            <li><span>OCI</span>DevOps Professional</li>
+            <li><span>LF</span>Implementing DevSecOps</li>
+          </ul>
+          <p class="education"><span>Education</span>BSc, Information Communication Technology — Jaramogi Oginga Odinga University of Science and Technology</p>
+        </div>
+      </section>
+
+      <section class="contact" id="contact" aria-labelledby="contact-title">
+        <div class="contact-inner reveal">
+          <p class="eyebrow">Let’s build something dependable</p>
+          <h2 id="contact-title">Have a platform challenge worth solving?</h2>
+          <a class="contact-email" href="mailto:rodgersbiwott2016@gmail.com">rodgersbiwott2016@gmail.com <span aria-hidden="true">↗</span></a>
+          <div class="contact-links">
+            <a href="https://www.linkedin.com/in/rodgersbiwott" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href="https://github.com/kiplongu" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://x.com/kiplongu" target="_blank" rel="noreferrer">X / Twitter ↗</a>
+            <a href="mailto:rodgersbiwott2016@gmail.com?subject=Résumé%20request">Request résumé ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year">2026</span> Rodgers Biwott</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
   </body>
 </html>
