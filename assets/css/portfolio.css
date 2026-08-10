@@ -130,6 +130,21 @@ h1 em { color: #397a5d; font-style: normal; }
 .site-footer p { margin: 0; }
 .site-footer a { text-decoration: none; }
 
+.resume-dialog { width: min(620px, calc(100% - 2rem)); padding: clamp(1.5rem, 4vw, 3rem); border: 0; background: var(--paper); color: var(--ink); box-shadow: 0 30px 90px rgba(7,18,15,.35); }
+.resume-dialog::backdrop { background: rgba(7,18,15,.72); backdrop-filter: blur(5px); }
+.resume-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 2rem; }
+.resume-dialog-head .eyebrow { color: #397a5d; }
+.dialog-close { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; font-size: 1.5rem; line-height: 1; }
+.dialog-close:hover, .dialog-close:focus-visible { background: var(--paper-2); }
+.resume-dialog h2 { max-width: 520px; margin-bottom: 1rem; font-size: clamp(2.2rem, 6vw, 4rem); line-height: 1; letter-spacing: -.055em; }
+.resume-dialog > p { color: var(--muted); }
+.resume-email-row { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding: 1rem 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font: .75rem var(--mono); }
+.resume-email-row span { overflow-wrap: anywhere; }
+.resume-email-row button { flex: 0 0 auto; border: 0; background: transparent; color: #397a5d; cursor: pointer; font: 500 .68rem var(--mono); text-transform: uppercase; }
+.copy-status { min-height: 1.5rem; margin: .55rem 0 0; font: .68rem var(--mono); color: #397a5d !important; }
+.resume-dialog-actions { display: flex; gap: .75rem; margin-top: 1.5rem; }
+.resume-dialog-actions .button { flex: 1; min-width: 0; }
+
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.is-visible { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } .reveal { opacity: 1; transform: none; transition: none; } }
@@ -169,5 +184,7 @@ h1 em { color: #397a5d; font-style: normal; }
   .project-features { gap: 1.2rem; }
   .credential-grid li { min-height: 110px; }
   .contact-email { overflow-wrap: anywhere; }
+  .resume-dialog-actions { flex-direction: column; }
+  .resume-email-row { align-items: flex-start; flex-direction: column; }
   .site-footer { flex-direction: column; }
 }
