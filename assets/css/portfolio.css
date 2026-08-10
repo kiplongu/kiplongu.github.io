@@ -96,7 +96,13 @@ h1 em { color: #397a5d; font-style: normal; }
 .project-copy { display: grid; grid-template-columns: 1.35fr .65fr; gap: clamp(2rem, 8vw, 8rem); align-items: end; }
 .project-copy h2 { margin: 0; font-size: clamp(2.2rem, 4.6vw, 4.8rem); line-height: 1.02; letter-spacing: -.06em; }
 .project-copy p { color: #324234; }
-.text-link { display: inline-flex; justify-content: space-between; width: 100%; padding: .7rem 0; border-bottom: 1px solid var(--ink); text-decoration: none; font: .75rem var(--mono); text-transform: uppercase; }
+.build-note { margin: 1.5rem 0 0; padding-top: 1rem; border-top: 1px solid rgba(11,21,18,.3); font: .7rem var(--mono); text-transform: uppercase; }
+.build-note .status-dot { background: #397a5d; box-shadow: 0 0 0 4px rgba(57,122,93,.15); }
+.project-screen { margin: clamp(3rem, 7vw, 7rem) 0 0; }
+.project-screen-frame { overflow: hidden; border: 1px solid rgba(11,21,18,.25); background: #dce4e7; box-shadow: 0 22px 50px rgba(30,69,49,.18); }
+.project-screen-frame img { display: block; width: 111.3%; max-width: none; height: auto; transform: translateX(-10.13%); }
+.project-screen figcaption { display: grid; grid-template-columns: minmax(120px, .4fr) 1.6fr; gap: 2rem; padding: 1.1rem 0; border-bottom: 1px solid rgba(11,21,18,.3); color: #324234; font-size: .78rem; }
+.project-screen figcaption span { font: .65rem var(--mono); text-transform: uppercase; color: #397a5d; }
 .project-features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 2rem 0 0; margin: 2rem 0 0; border-top: 1px solid rgba(11,21,18,.3); list-style: none; font-size: .8rem; }
 .project-features span { display: block; margin-bottom: .6rem; color: #397a5d; font: .65rem var(--mono); }
 
@@ -153,6 +159,7 @@ h1 em { color: #397a5d; font-style: normal; }
   .project { padding: 0; }
   .project-inner { min-height: 680px; }
   .project-topline { flex-direction: column; }
+  .project-screen figcaption { grid-template-columns: 1fr; gap: .5rem; }
   .project-features, .credential-grid { grid-template-columns: 1fr; }
   .project-features { gap: 1.2rem; }
   .credential-grid li { min-height: 110px; }
