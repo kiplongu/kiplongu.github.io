@@ -34,3 +34,27 @@ if (reducedMotion || !('IntersectionObserver' in window)) {
 
 const year = document.querySelector('#year');
 if (year) year.textContent = String(new Date().getFullYear());
+
+// Keep the compact navigation oriented as the reader moves through the story.
+const sectionLinks = [...(nav?.querySelectorAll('a[href^="#"]') ?? [])];
+const linkedSections = sectionLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+if ('IntersectionObserver' in window && linkedSections.length) {
+  const navObserver = new IntersectionObserver((entries) => {
+    const visible = entries
+      .filter((entry) => entry.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+    if (!visible) return;
+    sectionLinks.forEach((link) => {
+      const selected = link.getAttribute('href') === `#${visible.target.id}`;
+      link.classList.toggle('is-active', selected);
+      if (selected) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+  }, { rootMargin: '-20% 0px -65% 0px', threshold: [0, 0.1, 0.4] });
+
+  linkedSections.forEach((section) => navObserver.observe(section));
+}
