@@ -498,3 +498,77 @@ body { background: #f3f6fb; }
   .portrait figcaption { flex-direction: column; }
   .portrait figcaption small { text-align: left; }
 }
+
+/* Blue editorial masthead and featured product work. */
+.site-header {
+  max-width: none;
+  padding-left: max(var(--pad), calc((100vw - var(--page-width)) / 2 + var(--pad)));
+  padding-right: max(var(--pad), calc((100vw - var(--page-width)) / 2 + var(--pad)));
+  color: #fff;
+  background: var(--navy-950);
+}
+.header-context { color: var(--blue-300); }
+.brand { color: #fff; }
+.brand > span { color: #fff; }
+.brand small { color: var(--cyan); }
+.site-header nav { border-top-color: rgba(255,255,255,.5); border-bottom-color: rgba(255,255,255,.32); }
+.site-header nav a { color: #c7d9f2; }
+.site-header nav a:hover,
+.site-header nav a:focus-visible,
+.site-header nav a.is-active { color: #fff; }
+.site-header nav a::after { background: var(--cyan); }
+
+.hero {
+  max-width: none;
+  padding-left: max(var(--pad), calc((100vw - var(--page-width)) / 2 + var(--pad)));
+  padding-right: max(var(--pad), calc((100vw - var(--page-width)) / 2 + var(--pad)));
+  color: #fff;
+  background: radial-gradient(circle at 82% 16%, rgba(38,132,255,.36), transparent 29%), linear-gradient(145deg, var(--navy-950), var(--navy-900) 58%, #0a3c88);
+}
+.hero .eyebrow { color: var(--cyan); }
+.hero h1 { color: #fff; }
+.hero-lead { color: var(--blue-300); }
+.hero-lead em { color: #fff; }
+.hero-summary { color: #c5d6ed; }
+.hero .button-primary { color: var(--blue-700); background: #fff; border-color: #fff; }
+.hero .button-primary:hover { color: var(--navy-950); background: var(--cyan); border-color: var(--cyan); }
+.hero .button-quiet { color: #fff; background: rgba(255,255,255,.06); border-color: rgba(255,255,255,.35); }
+.hero .button-quiet:hover { color: #fff; border-color: var(--cyan); background: rgba(73,213,255,.08); }
+.hero .text-link,
+.hero-social a { color: #bad3f5; }
+.hero .text-link:hover,
+.hero-social a:hover { color: #fff; }
+.portrait::before { border-color: rgba(73,213,255,.52); }
+.portrait figcaption { color: #a9c2e4; }
+.portrait figcaption span { color: #fff; }
+
+.selected-work { background: #fff; }
+.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.work-card { min-width: 0; padding: clamp(1.7rem, 3.5vw, 3rem); border: 1px solid var(--line); border-radius: 7px; background: #f6f9fe; }
+.work-card-blue { color: #edf5ff; background: linear-gradient(145deg, #071d42, #0a4fbd); border-color: rgba(9,104,245,.35); }
+.work-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(2.8rem, 5vw, 5rem); color: var(--blue-700); font: 500 .62rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
+.work-card-blue .work-card-top { color: var(--blue-300); }
+.work-card-top strong { display: grid; place-items: center; width: 34px; height: 34px; border: 1px solid currentColor; border-radius: 50%; }
+.work-card h3 { margin-bottom: 1rem; color: var(--navy-950); font: 700 clamp(1.8rem, 3vw, 3rem)/1.05 var(--editorial); letter-spacing: -.045em; }
+.work-card-blue h3 { color: #fff; }
+.work-card > p { color: #51637e; }
+.work-card-blue > p { color: #c0d2eb; }
+.work-card ul { padding: 0; margin: 1.6rem 0 2rem; list-style: none; }
+.work-card li { padding: .7rem 0; border-top: 1px solid rgba(8,39,88,.13); color: #435773; font-size: .82rem; }
+.work-card-blue li { color: #c2d6f1; border-top-color: rgba(255,255,255,.14); }
+.work-card li::before { content: "↳"; margin-right: .7rem; color: var(--blue-600); }
+.work-card-blue li::before { color: var(--cyan); }
+.work-card a { color: var(--blue-700); font: 600 .65rem var(--mono); text-decoration: none; text-transform: uppercase; }
+.work-card-blue a { color: var(--cyan); }
+.work-card a:hover { text-decoration: underline; }
+.work-note { display: block; color: var(--blue-700); font: 500 .61rem var(--mono); text-transform: uppercase; }
+
+@media (max-width: 900px) {
+  .work-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .menu-toggle { color: #fff; }
+  .site-header nav { background: transparent; border-bottom-color: rgba(255,255,255,.32); }
+  .site-header nav a { border-bottom-color: rgba(255,255,255,.1); }
+}
