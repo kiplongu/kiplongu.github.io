@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Rodgers Biwott — Senior DevOps, DevSecOps and Platform Engineer">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#03122c"/><stop offset=".62" stop-color="#07265c"/><stop offset="1" stop-color="#0968f5"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#49d5ff" stop-opacity=".34"/><stop offset="1" stop-color="#49d5ff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="92" r="420" fill="url(#glow)"/>
+  <g opacity=".18" stroke="#8bc8ff"><path d="M740 0v630M820 0v630M900 0v630M980 0v630M1060 0v630M1140 0v630"/><path d="M700 70h500M700 150h500M700 230h500M700 310h500M700 390h500M700 470h500M700 550h500"/></g>
+  <rect x="72" y="68" width="74" height="74" rx="18" fill="#0968f5"/>
+  <text x="109" y="118" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="28" font-weight="700">RB</text>
+  <text x="72" y="244" fill="#49d5ff" font-family="Arial, sans-serif" font-size="21" font-weight="700" letter-spacing="4">PLATFORM · SECURITY · RELIABILITY</text>
+  <text x="72" y="334" fill="white" font-family="Arial, sans-serif" font-size="68" font-weight="700">Rodgers Biwott</text>
+  <text x="72" y="402" fill="#bcd2ef" font-family="Arial, sans-serif" font-size="30">Senior DevOps, DevSecOps &amp; Platform Engineer</text>
+  <g transform="translate(72 492)" font-family="Arial, sans-serif" font-size="20" fill="#dbeaff">
+    <rect width="166" height="54" rx="27" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".2"/><text x="83" y="34" text-anchor="middle">Kubernetes</text>
+    <rect x="182" width="120" height="54" rx="27" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".2"/><text x="242" y="34" text-anchor="middle">GitOps</text>
+    <rect x="318" width="154" height="54" rx="27" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".2"/><text x="395" y="34" text-anchor="middle">DevSecOps</text>
+    <rect x="488" width="104" height="54" rx="27" fill="#ffffff" fill-opacity=".08" stroke="#ffffff" stroke-opacity=".2"/><text x="540" y="34" text-anchor="middle">SRE</text>
+  </g>
+</svg>
