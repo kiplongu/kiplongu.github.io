@@ -642,3 +642,50 @@ body { background: #f3f6fb; }
   .assessment-flow, .readiness-grid { margin-top: 0; }
   .readiness-card, .report-preview, .assessment-flow { border-radius: 0; }
 }
+
+/* Keep the portrait and its caption within one predictable responsive card. */
+.hero .portrait {
+  width: 100%;
+  max-width: 440px;
+  margin: 0;
+  justify-self: end;
+}
+.hero .portrait::before { display: none; }
+.hero .portrait img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 24%;
+  border: 1px solid rgba(73,213,255,.5);
+  border-radius: 5px;
+}
+.hero .portrait figcaption {
+  display: grid;
+  grid-template-columns: minmax(0, auto) minmax(160px, 1fr);
+  gap: .75rem 1rem;
+  align-items: start;
+  padding: 1rem .1rem 0;
+}
+.hero .portrait figcaption span { white-space: nowrap; }
+.hero .portrait figcaption small {
+  min-width: 0;
+  text-align: right;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .hero .portrait { max-width: 440px; justify-self: center; }
+}
+
+@media (max-width: 720px) {
+  .hero .portrait { width: calc(100% - 28px); margin: 2rem auto 0; }
+  .hero .portrait figcaption { grid-template-columns: 1fr; }
+  .hero .portrait figcaption span { white-space: normal; }
+  .hero .portrait figcaption small { text-align: left; }
+}
+
+@media (max-width: 460px) {
+  .project-wordmark { font-size: clamp(3rem, 18vw, 5.2rem); }
+}
