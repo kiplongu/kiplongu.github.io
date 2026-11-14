@@ -543,7 +543,7 @@ body { background: #f3f6fb; }
 .portrait figcaption span { color: #fff; }
 
 .selected-work { background: #fff; }
-.work-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.work-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; }
 .work-card { min-width: 0; padding: clamp(1.7rem, 3.5vw, 3rem); border: 1px solid var(--line); border-radius: 7px; background: #f6f9fe; }
 .work-card-blue { color: #edf5ff; background: linear-gradient(145deg, #071d42, #0a4fbd); border-color: rgba(9,104,245,.35); }
 .work-card-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: clamp(2.8rem, 5vw, 5rem); color: var(--blue-700); font: 500 .62rem var(--mono); letter-spacing: .07em; text-transform: uppercase; }
@@ -562,6 +562,10 @@ body { background: #f3f6fb; }
 .work-card-blue a { color: var(--cyan); }
 .work-card a:hover { text-decoration: underline; }
 .work-note { display: block; color: var(--blue-700); font: 500 .61rem var(--mono); text-transform: uppercase; }
+
+@media (max-width: 1100px) {
+  .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 
 @media (max-width: 900px) {
   .work-grid { grid-template-columns: 1fr; }

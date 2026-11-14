@@ -7,7 +7,7 @@ from urllib.parse import urlsplit
 import sys
 
 ROOT = Path(__file__).resolve().parents[1]
-INDEX = ROOT / "index.html"
+PAGES = [ROOT / "index.html", *sorted((ROOT / "projects").glob("*/index.html"))]
 
 
 class PortfolioParser(HTMLParser):
@@ -33,36 +33,48 @@ class PortfolioParser(HTMLParser):
 
 
 def main() -> int:
-    source = INDEX.read_text(encoding="utf-8")
-    parser = PortfolioParser()
-    parser.feed(source)
     errors: list[str] = []
-
-    if parser.h1_count != 1:
-        errors.append(f"expected exactly one h1, found {parser.h1_count}")
-
-    for tag, reference in parser.references:
-        if reference.startswith("#"):
-            if reference[1:] not in parser.ids:
-                errors.append(f"broken fragment: {reference}")
-            continue
-        parsed = urlsplit(reference)
-        if parsed.scheme or reference.startswith("//"):
-            continue
-        path = parsed.path
-        if path and not (ROOT / path).is_file():
-            errors.append(f"missing local asset ({tag}): {path}")
-
-    for image in parser.images:
-        if not image.get("alt"):
-            errors.append(f"image missing alt text: {image.get('src')}")
-        if not image.get("width") or not image.get("height"):
-            errors.append(f"image missing intrinsic dimensions: {image.get('src')}")
-
-    # Keep the personal portfolio independent from the product-company brand.
+    total_references = 0
+    total_images = 0
     forbidden_brand = "lit" + "anovo"
-    if forbidden_brand in source.lower():
-        errors.append("personal portfolio contains a forbidden company-brand reference")
+
+    for page in PAGES:
+        source = page.read_text(encoding="utf-8")
+        parser = PortfolioParser()
+        parser.feed(source)
+        total_references += len(parser.references)
+        total_images += len(parser.images)
+        page_label = page.relative_to(ROOT)
+
+        if parser.h1_count != 1:
+            errors.append(f"{page_label}: expected exactly one h1, found {parser.h1_count}")
+
+        for tag, reference in parser.references:
+            if reference.startswith("#"):
+                if reference[1:] not in parser.ids:
+                    errors.append(f"{page_label}: broken fragment: {reference}")
+                continue
+            parsed = urlsplit(reference)
+            if parsed.scheme or reference.startswith("//"):
+                continue
+            path = parsed.path
+            if not path:
+                continue
+            resolved = (page.parent / path).resolve()
+            if path.endswith("/"):
+                resolved = resolved / "index.html"
+            if not resolved.is_file():
+                errors.append(f"{page_label}: missing local asset ({tag}): {path}")
+
+        for image in parser.images:
+            if not image.get("alt"):
+                errors.append(f"{page_label}: image missing alt text: {image.get('src')}")
+            if not image.get("width") or not image.get("height"):
+                errors.append(f"{page_label}: image missing intrinsic dimensions: {image.get('src')}")
+
+        # Keep the personal portfolio independent from the product-company brand.
+        if forbidden_brand in source.lower():
+            errors.append(f"{page_label}: personal portfolio contains a forbidden company-brand reference")
 
     required_files = ["robots.txt", "sitemap.xml", "images/favicon.svg"]
     for filename in required_files:
@@ -75,7 +87,10 @@ def main() -> int:
             print(f"- {error}")
         return 1
 
-    print(f"Portfolio validation passed: {len(parser.references)} references and {len(parser.images)} images checked.")
+    print(
+        f"Portfolio validation passed: {len(PAGES)} pages, "
+        f"{total_references} references and {total_images} images checked."
+    )
     return 0
 
 

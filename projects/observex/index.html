@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#061a3a">
+  <meta name="description" content="ObserveX engineering case study by Rodgers Biwott: observability, SRE, DevSecOps, GitOps, Kubernetes and verified recovery.">
+  <meta property="og:title" content="ObserveX — Observability and Reliability Engineering Case Study">
+  <meta property="og:description" content="A production-focused command centre connecting service health, SLOs, incidents, security, releases and recovery evidence.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kiplongu.github.io/projects/observex/">
+  <meta property="og:image" content="https://kiplongu.github.io/images/observex-overview.png?v=084-20261030">
+  <title>ObserveX — Engineering Case Study | Rodgers Biwott</title>
+  <link rel="canonical" href="https://kiplongu.github.io/projects/observex/">
+  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/portfolio.css?v=20261114">
+  <link rel="stylesheet" href="../../assets/css/project-pages.css?v=20261114">
+  <script src="../../assets/js/portfolio.js?v=20261017" defer></script>
+</head>
+<body class="project-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <p class="header-context">Engineering case study · Observability, SRE and DevSecOps</p>
+  <a class="brand" href="../../" aria-label="Rodgers Biwott portfolio home"><span>Rodgers Biwott</span><small>Senior Platform &amp; Site Reliability Engineer</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
+  <nav id="site-nav" aria-label="Case study navigation"><a href="../../">← Portfolio</a><a href="#architecture">Architecture</a><a href="#evidence">Evidence</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main class="project-main" id="main">
+  <section class="project-hero">
+    <div class="project-hero-inner reveal">
+      <div class="project-breadcrumb"><a href="../../#work">Featured work</a><span>/</span><span>ObserveX</span></div>
+      <p class="project-eyebrow">Observability product + GitOps platform</p>
+      <h1>ObserveX</h1>
+      <p class="project-lead">A production-focused operational command centre connecting service ownership, golden signals, SLOs, incidents, security evidence, deployment intelligence and verified recovery.</p>
+      <div class="project-actions"><a href="#evidence">Explore the evidence ↓</a><a href="https://youtu.be/2ZXoQNwlIxY" target="_blank" rel="noreferrer">Watch demonstration ↗</a></div>
+    </div>
+  </section>
+
+  <dl class="project-facts reveal">
+    <div><dt>Role</dt><dd>Product, platform and SRE engineering</dd></div>
+    <div><dt>Runtime</dt><dd>Kubernetes + Helm</dd></div>
+    <div><dt>Delivery</dt><dd>Argo CD GitOps</dd></div>
+    <div><dt>Telemetry</dt><dd>OpenTelemetry stack</dd></div>
+  </dl>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>01 · Context</span><h2>Operational evidence was fragmented across specialist systems.</h2></div>
+    <div class="project-two-column reveal">
+      <p class="project-pullquote">The goal was not to replace Grafana, Prometheus or security scanners. It was to connect their evidence to ownership and action.</p>
+      <div><p>Metrics, logs, traces, deployments, vulnerabilities and recovery evidence often live in separate tools. Engineers still need a coherent answer to four questions: what is affected, who owns it, what changed, and what should happen next?</p><p>I designed ObserveX as a multi-workspace React application backed by a separate GitOps platform repository. The application provides focused operational workflows while established open-source systems remain the sources of telemetry truth.</p></div>
+    </div>
+  </section>
+
+  <section class="project-section" id="architecture">
+    <div class="project-section-head reveal"><span>02 · Release architecture</span><h2>Verified source becomes immutable desired state.</h2></div>
+    <div class="project-flow reveal" role="img" aria-label="ObserveX source passes tests and security gates, publishes immutable artifacts, updates the platform repository, and is reconciled by Argo CD into Kubernetes">
+      <div><small>01</small><strong>ObserveX source</strong><span>Application code</span></div><b>→</b>
+      <div><small>02</small><strong>CI + DevSecOps</strong><span>Test, scan, SBOM</span></div><b>→</b>
+      <div><small>03</small><strong>Signed artifacts</strong><span>Immutable digests</span></div><b>→</b>
+      <div><small>04</small><strong>Desired state</strong><span>Platform repository</span></div><b>→</b>
+      <div><small>05</small><strong>Argo CD</strong><span>Reconciliation</span></div><b>→</b>
+      <div><small>06</small><strong>Kubernetes</strong><span>Runtime + evidence</span></div>
+    </div>
+    <p class="project-note reveal">CI publishes and promotes a verified release tuple without receiving cluster credentials. Git provides the deployment audit trail, drift detection and rollback path.</p>
+  </section>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>03 · Engineering</span><h2>Reliability, security and recovery are part of one operating model.</h2></div>
+    <div class="project-card-grid">
+      <article class="project-card reveal"><span>SRE</span><h3>Service-level reliability</h3><ul><li>Four golden signals</li><li>Configurable SLIs and SLOs</li><li>Error budgets and burn rates</li><li>Multi-window alerting</li><li>Missing-telemetry handling</li></ul></article>
+      <article class="project-card reveal"><span>Observability</span><h3>Evidence correlation</h3><ul><li>Prometheus service metrics</li><li>Loki log evidence</li><li>Tempo trace context</li><li>Kubernetes events</li><li>Deployment-change correlation</li></ul></article>
+      <article class="project-card reveal"><span>DevSecOps</span><h3>Verified remediation</h3><ul><li>Source and dependency controls</li><li>Container and IaC scanning</li><li>SBOM and signed artifacts</li><li>Remediation evidence</li><li>Rescan before resolution</li></ul></article>
+      <article class="project-card reveal"><span>Recovery</span><h3>Restore-tested data protection</h3><ul><li>PostgreSQL persistence</li><li>Encrypted scheduled backups</li><li>Retention metadata</li><li>Automated restore verification</li><li>Recovery evidence</li></ul></article>
+      <article class="project-card reveal"><span>Identity</span><h3>Protected operational access</h3><ul><li>Keycloak SSO</li><li>OAuth2 Proxy edge</li><li>Role-aware access</li><li>Tenant isolation</li><li>Authenticated integrations</li></ul></article>
+      <article class="project-card reveal"><span>Operations</span><h3>Evidence-based investigation</h3><ul><li>Read-only incident analysis</li><li>Service and owner context</li><li>Potential-cause ranking</li><li>Runbook-linked actions</li><li>No autonomous remediation</li></ul></article>
+    </div>
+  </section>
+
+  <section class="project-visual" id="evidence">
+    <div class="project-visual-inner">
+      <div class="project-section-head reveal"><span>04 · Product evidence</span><h2>Focused workspaces for different operational questions.</h2></div>
+      <div class="project-gallery reveal">
+        <figure class="project-screen project-screen-featured"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · Operational Overview</span></div><img src="../../images/observex-overview.webp?v=084-20261030" alt="ObserveX overview showing services, incidents, infrastructure, SLOs and delivery risk" width="1600" height="1000"></div><figcaption><span>Command centre</span>Service health, incidents, infrastructure, SLOs, security and delivery risk in one operational view.</figcaption></figure>
+        <figure class="project-screen"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · Services</span></div><img src="../../images/observex-services.webp?v=084-20261030" alt="ObserveX Services workspace showing ownership and golden signals" width="1600" height="1000" loading="lazy"></div><figcaption><span>Services</span>Ownership, latency, traffic, errors, saturation and burn-rate context.</figcaption></figure>
+        <figure class="project-screen"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · SLOs</span></div><img src="../../images/observex-slos.webp?v=084-20261030" alt="ObserveX SLO workspace showing golden signals and error budgets" width="1600" height="1000" loading="lazy"></div><figcaption><span>SLOs</span>Indicators, compliance, error budgets and burn-rate visibility.</figcaption></figure>
+        <figure class="project-screen"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · Security</span></div><img src="../../images/observex-security-posture.webp?v=084-20261030" alt="ObserveX Security workspace showing findings and remediation workflows" width="1600" height="1000" loading="lazy"></div><figcaption><span>Security</span>Findings, remediation evidence, rescans and verified resolution.</figcaption></figure>
+        <figure class="project-screen"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · DeployTrack</span></div><img src="../../images/observex-deploytrack.webp?v=084-20261030" alt="ObserveX DeployTrack showing immutable releases and rollback readiness" width="1600" height="1000" loading="lazy"></div><figcaption><span>DeployTrack</span>Immutable releases correlated with health, risk and rollback readiness.</figcaption></figure>
+        <figure class="project-screen"><div class="browser-frame"><div class="browser-bar"><i></i><i></i><i></i><span>ObserveX · Platform Health</span></div><img src="../../images/observex-platform-health.webp?v=084-20261030" alt="ObserveX Platform Health showing telemetry, authentication and storage integrations" width="1600" height="1000" loading="lazy"></div><figcaption><span>Platform health</span>Runtime dependencies across telemetry, identity, storage and retention.</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>05 · Technology</span><h2>Open-source systems connected through clear contracts.</h2></div>
+    <div class="project-stack reveal"><span>React</span><span>Node.js</span><span>PostgreSQL</span><span>Kubernetes</span><span>Helm</span><span>Argo CD</span><span>OpenTelemetry</span><span>Prometheus</span><span>Grafana</span><span>Loki</span><span>Tempo</span><span>Alertmanager</span><span>Keycloak</span><span>Trivy</span><span>Cosign</span><span>Kyverno</span><span>MinIO</span></div>
+  </section>
+
+  <section class="project-cta" id="contact"><div class="reveal"><p class="project-eyebrow">Platform and reliability engineering</p><h2>Need an observability platform teams can actually operate?</h2><p>I design Kubernetes, GitOps, observability and secure-delivery systems with explicit ownership, measurable reliability and recovery evidence.</p><div class="project-actions"><a href="mailto:rodgersbiwott2016@gmail.com">Contact me ↗</a><a href="../../#work">Explore more work</a></div></div></section>
+</main>
+
+<footer class="site-footer"><p>© <span id="year">2026</span> Rodgers Biwott</p><p>Observability · SRE · DevSecOps</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>

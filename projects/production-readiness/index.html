@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#061a3a">
+  <meta name="description" content="Production Readiness Assessment Engine case study by Rodgers Biwott: evidence collection, risk scoring, remediation and verified reassessment.">
+  <meta property="og:title" content="Production Readiness Assessment Engine — Engineering Case Study">
+  <meta property="og:description" content="A containerized, evidence-led assessment workflow for delivery, Kubernetes, security, observability and recovery controls.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://kiplongu.github.io/projects/production-readiness/">
+  <meta property="og:image" content="https://kiplongu.github.io/images/rodgers-biwott-social-card.png">
+  <title>Production Readiness Assessment Engine | Rodgers Biwott</title>
+  <link rel="canonical" href="https://kiplongu.github.io/projects/production-readiness/">
+  <link rel="icon" href="../../images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../assets/css/portfolio.css?v=20261114">
+  <link rel="stylesheet" href="../../assets/css/project-pages.css?v=20261114">
+  <script src="../../assets/js/portfolio.js?v=20261017" defer></script>
+</head>
+<body class="project-page readiness">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header" id="top">
+  <p class="header-context">Engineering case study · Assessment automation and assurance</p>
+  <a class="brand" href="../../" aria-label="Rodgers Biwott portfolio home"><span>Rodgers Biwott</span><small>Senior Platform &amp; Site Reliability Engineer</small></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span>Menu</span></button>
+  <nav id="site-nav" aria-label="Case study navigation"><a href="../../">← Portfolio</a><a href="#workflow">Workflow</a><a href="#evidence">Evidence</a><a href="#contact">Contact</a></nav>
+</header>
+
+<main class="project-main" id="main">
+  <section class="project-hero">
+    <div class="project-hero-inner reveal">
+      <div class="project-breadcrumb"><a href="../../#work">Featured work</a><span>/</span><span>Production Readiness</span></div>
+      <p class="project-eyebrow">Evidence-led assessment engineering</p>
+      <h1>Production Readiness</h1>
+      <p class="project-lead">A passive, containerized assessment engine that turns authorized repository evidence into prioritized findings, governed exceptions, remediation work and independently verifiable closeout artifacts.</p>
+      <div class="project-actions"><a href="#workflow">Explore the workflow ↓</a><a href="../../#contact">Discuss an assessment ↗</a></div>
+    </div>
+  </section>
+
+  <dl class="project-facts reveal">
+    <div><dt>Operating model</dt><dd>Read-only and authorized</dd></div>
+    <div><dt>Runtime</dt><dd>Non-root Docker image</dd></div>
+    <div><dt>Outputs</dt><dd>JSON, HTML and PDF</dd></div>
+    <div><dt>Integrity</dt><dd>SHA-256 + signatures</dd></div>
+  </dl>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>01 · Problem</span><h2>Production readiness discussions need evidence, not checkbox confidence.</h2></div>
+    <div class="project-two-column reveal">
+      <p class="project-pullquote">A deployment can succeed while recovery, supply-chain controls and operational ownership remain unproven.</p>
+      <div><p>I built the assessment engine to evaluate an explicitly authorized repository without connecting to networks, clusters, cloud accounts, registries, identity systems or databases. The target is mounted read-only and only the report directory is writable.</p><p>The engine applies a profile appropriate to the target—application, GitOps platform or infrastructure—so repositories are assessed against relevant controls rather than a universal checklist.</p></div>
+    </div>
+  </section>
+
+  <section class="project-section" id="workflow">
+    <div class="project-section-head reveal"><span>02 · Workflow</span><h2>Assessment continues through remediation and verified reassessment.</h2></div>
+    <div class="project-flow reveal" role="img" aria-label="Authorized scope moves through evidence collection, control evaluation, risk scoring, remediation and verified reassessment">
+      <div><small>01</small><strong>Authorize</strong><span>Scope + engagement</span></div><b>→</b>
+      <div><small>02</small><strong>Collect</strong><span>Read-only evidence</span></div><b>→</b>
+      <div><small>03</small><strong>Evaluate</strong><span>Controls + policy</span></div><b>→</b>
+      <div><small>04</small><strong>Prioritize</strong><span>Risk + ownership</span></div><b>→</b>
+      <div><small>05</small><strong>Remediate</strong><span>Reviewed changes</span></div><b>→</b>
+      <div><small>06</small><strong>Verify</strong><span>Reassess + closeout</span></div>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>03 · Control model</span><h2>One evidence model, adapted to the system under review.</h2></div>
+    <div class="project-card-grid">
+      <article class="project-card reveal"><span>Delivery</span><h3>CI/CD governance</h3><p>Build, test, security validation, artifact publication and promotion controls are evaluated from repository evidence.</p></article>
+      <article class="project-card reveal"><span>Supply chain</span><h3>Artifact integrity</h3><p>Dependency locking, image immutability, SBOM generation, vulnerability gates, signing and attestation.</p></article>
+      <article class="project-card reveal"><span>Kubernetes</span><h3>Workload safeguards</h3><p>Identity, privilege, resource governance, probes, network boundaries and immutable image references.</p></article>
+      <article class="project-card reveal"><span>Operations</span><h3>Observability and SLOs</h3><p>Telemetry, actionable alerting, service objectives, incident ownership and operational runbooks.</p></article>
+      <article class="project-card reveal"><span>Recovery</span><h3>Restore evidence</h3><p>Backup automation, encryption, retention, recovery objectives and proof that restoration has been tested.</p></article>
+      <article class="project-card reveal"><span>Governance</span><h3>Owned exceptions</h3><p>Accepted risk retains original evidence and requires an accountable owner, rationale and expiry date.</p></article>
+    </div>
+  </section>
+
+  <section class="project-visual" id="evidence">
+    <div class="project-visual-inner">
+      <div class="project-section-head reveal"><span>04 · Demonstration evidence</span><h2>A complete fictional baseline-to-closeout journey.</h2></div>
+      <div class="report-journey reveal" aria-label="Illustrative baseline and reassessment report comparison">
+        <article class="report-card"><span>Authorized baseline</span><div class="report-score"><strong>34</strong><small>of 100</small></div><ul><li>Six prioritized delivery-control findings</li><li>Executive risk narrative</li><li>Phased remediation roadmap</li><li>Evidence manifest with artifact hashes</li></ul></article>
+        <div class="report-arrow" aria-hidden="true">→</div>
+        <article class="report-card"><span>Verified reassessment</span><div class="report-score"><strong>100</strong><small>of 100</small></div><ul><li>Six control transitions verified</li><li>No score-only inference</li><li>Closeout comparison and work-plan CSV</li><li>Machine-verifiable evidence manifest</li></ul></article>
+      </div>
+      <p class="project-note reveal">The values above come from a purpose-built fictional demonstration fixture. They illustrate the workflow and are not presented as a client result or certification.</p>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>05 · Safety and integrity</span><h2>The assessment boundary is an engineering feature.</h2></div>
+    <div class="project-card-grid">
+      <article class="project-card reveal"><span>Passive by design</span><h3>No target connectivity</h3><p>No network discovery, cloud login, cluster access, registry access or database connection is performed.</p></article>
+      <article class="project-card reveal"><span>Reproducible runtime</span><h3>Container-first operation</h3><p>The reviewed non-root image contains pinned runtime and reporting dependencies while client evidence remains read-only.</p></article>
+      <article class="project-card reveal"><span>Evidence integrity</span><h3>Verify before delivery</h3><p>Manifests record SHA-256 hashes, byte sizes, tool version and immutable image identity; optional Ed25519 signatures support independent verification.</p></article>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <div class="project-section-head reveal"><span>06 · Technology</span><h2>Minimal dependencies, reproducible execution and automation-friendly outputs.</h2></div>
+    <div class="project-stack reveal"><span>Docker</span><span>Node.js</span><span>Python</span><span>ReportLab</span><span>JSON</span><span>HTML</span><span>PDF</span><span>SHA-256</span><span>Ed25519</span><span>GitHub Actions</span><span>Kubernetes policy</span><span>CI security gates</span></div>
+  </section>
+
+  <section class="project-cta" id="contact"><div class="reveal"><p class="project-eyebrow">From assessment to verified closeout</p><h2>Need evidence before calling a system production-ready?</h2><p>I combine automated inspection with human validation, remediation planning and reassessment so readiness decisions remain explainable and auditable.</p><div class="project-actions"><a href="mailto:rodgersbiwott2016@gmail.com">Contact me ↗</a><a href="../../#work">Explore more work</a></div></div></section>
+</main>
+
+<footer class="site-footer"><p>© <span id="year">2026</span> Rodgers Biwott</p><p>Assessment · Remediation · Verification</p><a href="#top">Back to top ↑</a></footer>
+</body>
+</html>
